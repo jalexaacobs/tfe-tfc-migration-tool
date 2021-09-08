@@ -1,0 +1,27 @@
+{
+    "data": {
+        "attributes": {
+            "name": "aws-sandbox-testing",
+            "terraform_version": "1.0.0",
+            "working-directory": "",
+            "file-triggers-enabled": false,
+            "allow-destroy-plan": true,
+            "auto-apply": false,
+            "execution-mode": "remote",
+            "description": null,
+            "source-name": null,
+            "source-url": null,
+            "queue-all-runs": false,
+            "speculative-enabled": false,
+            "trigger-prefixes": [],
+            "vcs-repo": {
+                "identifier": "GCSTFEW/aws-sandbox-testing",
+                "oauth-token-id": "ot-kF2dX5SipVt3ENjb",
+                "branch": "",
+                "default-branch": true,
+                "ingress-submodules": false
+            }
+        },
+        "type": "workspaces"
+    }
+}

@@ -2,6 +2,9 @@
 Module for Terraform Enterprise/Cloud Migration Worker: Workspaces.
 """
 
+import sys
+import json
+
 from .base_worker import TFCMigratorBaseWorker
 
 class WorkspacesWorker(TFCMigratorBaseWorker):
@@ -23,6 +26,16 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
         # Fetch workspaces from existing org
         source_workspaces = self._api_source.workspaces.list_all()
         target_workspaces = self._api_target.workspaces.list_all()
+
+        # # lazy way of learning what source_workspaces is
+        # print("Original Source Workspaces:")
+        # print(str(source_workspaces))
+
+        # grab the sandbox workspace for right now: ws-1xKs7xLA2nP3ExYd
+        source_workspaces = [x for x in source_workspaces if x['id'] == "ws-1xKs7xLA2nP3ExYd"]
+        # print("\n\nModified Source Workspaces with Desired Workspaces")
+        # print(str(source_workspaces))
+        # sys.exit("Exiting.")
 
         target_workspaces_data = {}
         for target_workspace in target_workspaces:
@@ -101,6 +114,13 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                 }
 
             # Build the new workspace
+
+            with open("NewWorkspacePayload.json","w") as f:
+                json.dump(new_workspace_payload,f, indent=4)
+
+            # make this a json map
+            new_workspace_payload['data']['attributes']["vcs-repo"]["identifier"] = "HylandMigrationTest/aws-sandbox-testing"
+
             new_workspace = self._api_target.workspaces.create(new_workspace_payload)
             self._logger.info("Workspace: %s, created.", source_workspace_name)
 
