@@ -27,15 +27,10 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
         source_workspaces = self._api_source.workspaces.list_all()
         target_workspaces = self._api_target.workspaces.list_all()
 
-        # # lazy way of learning what source_workspaces is
-        # print("Original Source Workspaces:")
-        # print(str(source_workspaces))
-
-        # grab the sandbox workspace for right now: ws-1xKs7xLA2nP3ExYd
-        source_workspaces = [x for x in source_workspaces if x['id'] == "ws-1xKs7xLA2nP3ExYd"]
-        # print("\n\nModified Source Workspaces with Desired Workspaces")
-        # print(str(source_workspaces))
-        # sys.exit("Exiting.")
+        # grab the desired workspaces
+        workspacesToGrab = {"ws-1xKs7xLA2nP3ExYd", "ws-xtgbftFWNS6QmSay", "ws-iim7tqjfHeaPjFpp"} #sandbox testing, cloud portal dca, cloud portal gru 
+        #source_workspaces = [x for x in source_workspaces if x['id'] == "ws-1xKs7xLA2nP3ExYd"]
+        source_workspaces = [x for x in source_workspaces if x['id'] in workspacesToGrab]
 
         target_workspaces_data = {}
         for target_workspace in target_workspaces:
