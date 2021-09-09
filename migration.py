@@ -2,6 +2,9 @@ import os
 import argparse
 import json
 import logging
+from sys import argv
+import sys
+import datetime
 from terrasnek.api import TFC
 from tfc_migrate.migrator import TFCMigrator
 
@@ -76,7 +79,9 @@ if __name__ == "__main__":
     if args.debug:
         log_level = logging.DEBUG
 
-    logging.basicConfig(level=log_level)
+    logging.basicConfig(filename='RunLogs.log', encoding='utf-8', level=log_level)
+    current_time = datetime.datetime.now() 
+    logging.info("New run started at " + str(current_time) + ". Arguments passed in: " + str(argv) + "\n\n\n\n")
 
     migrator = TFCMigrator(api_source, api_target, TFE_VCS_CONNECTION_MAP, SENSITIVE_DATA_MAP, log_level)
 
