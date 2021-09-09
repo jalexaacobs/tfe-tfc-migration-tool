@@ -39,6 +39,8 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
         workspaces_map = {}
         workspace_to_ssh_key_map = {}
 
+        vcsMapping = json.load(open('vcsMapping.json'))
+
         for source_workspace in source_workspaces:
             source_workspace_name = source_workspace["attributes"]["name"]
             source_workspace_id = source_workspace["id"]
@@ -100,8 +102,11 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                         source_workspace["attributes"]["vcs-repo"]["oauth-token-id"]:
                         oauth_token_id = vcs_connection["target"]
 
+                #grab the repo identifier from the json mapping using source_workspace_name
+                repoId = vcsMapping[source_workspace_name]["target"]
+
                 new_workspace_payload["data"]["attributes"]["vcs-repo"] = {
-                    "identifier": source_workspace["attributes"]["vcs-repo-identifier"],
+                    "identifier": repoId,
                     "oauth-token-id": oauth_token_id,
                     "branch": branch,
                     "default-branch": default_branch,
@@ -109,13 +114,6 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                 }
 
             # Build the new workspace
-
-            with open("NewWorkspacePayload.json","w") as f:
-                json.dump(new_workspace_payload,f, indent=4)
-
-            # make this a json map
-            new_workspace_payload['data']['attributes']["vcs-repo"]["identifier"] = "HylandMigrationTest/aws-sandbox-testing"
-
             new_workspace = self._api_target.workspaces.create(new_workspace_payload)
             self._logger.info("Workspace: %s, created.", source_workspace_name)
 

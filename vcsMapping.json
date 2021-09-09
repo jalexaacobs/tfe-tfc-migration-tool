@@ -1,0 +1,16 @@
+{
+   "aws-cloud-portal-gru" : {
+      "source":"GCSTFEW/aws-cloud-portal",
+      "target":"HylandMigrationTest/aws-cloud-portal"
+   },
+   
+   "aws-cloud-portal-dca" : {
+      "source":"GCSTFEW/aws-cloud-portal",
+      "target":"HylandMigrationTest/aws-cloud-portal"
+   },
+
+   "aws-sandbox-testing" : {
+      "source":"GCSTFEW/aws-sandbox-testing",
+      "target":"HylandMigrationTest/aws-sandbox-testing"
+   }
+}
