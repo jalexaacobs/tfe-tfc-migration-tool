@@ -6,6 +6,7 @@ from abc import ABC
 
 import json
 import logging
+import sys
 
 from .agent_pools import AgentPoolsWorker
 from .config_versions import ConfigVersionsWorker
@@ -80,8 +81,18 @@ class TFCMigrator(ABC):
         sensitive_policy_set_parameter_data = {}
 
         # TODO: org_membership_map = org_memberships.migrate(api_source, api_target, teams_map)
+
         if self.teams.is_valid_migration():
             teams_map = self.teams.migrate_all()
+
+        if self.registry_module_versions.is_valid_migration():
+            # this is for non version controlled modules - should be none
+            self.registry_module_versions.migrate_all()
+
+            # this is for the actual VCS modules
+            self.registry_modules.migrate_all()
+
+        sys.exit()
 
         ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()
 
@@ -119,10 +130,6 @@ class TFCMigrator(ABC):
         # have to be updated separately.
         if self.policy_sets.is_valid_migration():
             sensitive_policy_set_parameter_data = self.policy_set_params.migrate_all(policy_sets_map)
-
-        # if self.registry_module_versions.is_valid_migration():
-        #     self.registry_module_versions.migrate_all()
-
 
         output_json = {
             "teams_map": teams_map,

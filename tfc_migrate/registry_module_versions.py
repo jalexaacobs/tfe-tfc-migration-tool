@@ -3,7 +3,8 @@ Module for Terraform Enterprise/Cloud Migration Worker: Registry Module Versions
 """
 
 import os
-
+import sys
+import json
 from .base_worker import TFCMigratorBaseWorker
 
 
@@ -23,10 +24,12 @@ class RegistryModuleVersionsWorker(TFCMigratorBaseWorker):
 
         self._logger.info("Migrating registry module versions...")
 
-        source_modules = self._api_source.registry_modules.list()["modules"]
+        source_modules = self._api_source.registry_modules.list(limit=200)["modules"]
         target_modules = self._api_target.registry_modules.list()["modules"]
         target_module_names = \
             [target_module["name"] for target_module in target_modules]
+
+        #print(json.dumps(source_modules, indent=4))
 
         for source_module in source_modules:
             if source_module["source"] == "":
