@@ -92,8 +92,6 @@ class TFCMigrator(ABC):
             # this is for the actual VCS modules
             self.registry_modules.migrate_all()
 
-        sys.exit()
-
         ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()
 
         if self.agent_pools.is_valid_migration():

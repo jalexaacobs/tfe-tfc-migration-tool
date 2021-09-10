@@ -12,5 +12,10 @@
    "aws-sandbox-testing" : {
       "source":"GCSTFEW/aws-sandbox-testing",
       "target":"HylandMigrationTest/aws-sandbox-testing"
+   },
+
+   "terraform-aws-sandbox-testing" : {
+      "source":"GCSTM/terraform-aws-sandbox-testing",
+      "target":"HylandMigrationTest/terraform-aws-sandbox-testing"
    }
 }

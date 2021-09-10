@@ -27,7 +27,12 @@ class RegistryModulesWorker(TFCMigratorBaseWorker):
         target_module_names = \
             [target_module["name"] for target_module in target_modules]
 
+        modulesToGrab = {"sandbox-testing"}
+        source_modules = [x for x in source_modules if x['name'] in modulesToGrab]
+
         print(json.dumps(source_modules, indent=4))
+
+        vcsMapping = json.load(open('vcsMapping.json'))
 
         for source_module in source_modules:
             if source_module["source"] != "":
@@ -47,23 +52,26 @@ class RegistryModulesWorker(TFCMigratorBaseWorker):
                         source_module_data["attributes"]["vcs-repo"]["oauth-token-id"]:
                         oauth_token_id = vcs_connection["target"]
 
+                # grab the vcs mapping for the module, it strips away the 'terraform-aws' so we add it back in here to grab
+                moduleId = vcsMapping["terraform-aws-" + str(source_module_name)]["target"]
+
                 # Build the new module payload
                 new_module_payload = {
                     "data": {
                         "attributes": {
                             "vcs-repo": {
-                                "identifier": \
-                                    source_module_data["attributes"]["vcs-repo"]["identifier"],
+                                "identifier": moduleId,
                                 # NOTE that if the VCS the module was connected to has been
                                 # deleted, it will not return Token ID and this will error.
                                 "oauth-token-id": oauth_token_id,
-                                "display_identifier": source_module_data\
-                                    ["attributes"]["vcs-repo"]["display-identifier"]
+                                "display_identifier": moduleId
                             }
                         },
                         "type": "registry-modules"
                     }
                 }
+
+                print(json.dumps(new_module_payload, indent=4))
 
                 # Create the module in the target organization
                 self._api_target.registry_modules.publish_from_vcs(new_module_payload)

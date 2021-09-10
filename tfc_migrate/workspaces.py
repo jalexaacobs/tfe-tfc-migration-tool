@@ -29,7 +29,6 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
 
         # grab the desired workspaces
         workspacesToGrab = {"ws-1xKs7xLA2nP3ExYd", "ws-xtgbftFWNS6QmSay", "ws-iim7tqjfHeaPjFpp"} #sandbox testing, cloud portal dca, cloud portal gru 
-        #source_workspaces = [x for x in source_workspaces if x['id'] == "ws-1xKs7xLA2nP3ExYd"]
         source_workspaces = [x for x in source_workspaces if x['id'] in workspacesToGrab]
 
         target_workspaces_data = {}

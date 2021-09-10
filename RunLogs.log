@@ -1414,3 +1414,168 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hyland
 DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
 DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 289
+INFO:root:
+
+
+
+New run started at 2021-09-10 15:43:43.176280. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:TeamsWorker:The entitlements in the source or target org do not allow this migration.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 289
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 289
+INFO:RegistryModulesWorker:Registry Module: sandbox-testing, exists. Skipped.
+INFO:RegistryModulesWorker:Registry modules migrated.
+INFO:root:
+
+
+
+New run started at 2021-09-10 15:46:44.476824. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:TeamsWorker:The entitlements in the source or target org do not allow this migration.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/registry-modules HTTP/1.1" 500 61
+INFO:root:
+
+
+
+New run started at 2021-09-10 15:48:04.095585. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:TeamsWorker:The entitlements in the source or target org do not allow this migration.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/registry-modules HTTP/1.1" 500 61
+INFO:root:
+
+
+
+New run started at 2021-09-10 15:53:54.568118. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:TeamsWorker:The entitlements in the source or target org do not allow this migration.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-09-10 15:55:20.160780. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:TeamsWorker:The entitlements in the source or target org do not allow this migration.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 78
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/registry-modules HTTP/1.1" 201 1007
+INFO:RegistryModulesWorker:Registry modules migrated.
+INFO:root:
+
+
+
+New run started at 2021-09-10 15:56:15.285450. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:TeamsWorker:The entitlements in the source or target org do not allow this migration.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 289
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/MigrationTest HTTP/1.1" 200 289
+INFO:RegistryModulesWorker:Registry Module: sandbox-testing, exists. Skipped.
+INFO:RegistryModulesWorker:Registry modules migrated.
+INFO:SSHKeysWorker:Migrating SSH keys...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/ssh-keys HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/ssh-keys HTTP/1.1" 200 11
+INFO:SSHKeysWorker:SSH keys migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/MigrationTest/entitlement-set HTTP/1.1" 200 439
+INFO:AgentPoolsWorker:The entitlements in the source or target org do not allow this migration.
+INFO:WorkspacesWorker:Migrating workspaces...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/workspaces?page[number]=2&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/workspaces?page[number]=3&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
