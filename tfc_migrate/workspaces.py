@@ -28,8 +28,13 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
         target_workspaces = self._api_target.workspaces.list_all()
 
         # grab the desired workspaces
-        workspacesToGrab = {"ws-1xKs7xLA2nP3ExYd", "ws-xtgbftFWNS6QmSay", "ws-iim7tqjfHeaPjFpp"} #sandbox testing, cloud portal dca, cloud portal gru 
+        workspacesToGrab = {"ws-1xKs7xLA2nP3ExYd"} #sandbox testing
         source_workspaces = [x for x in source_workspaces if x['id'] in workspacesToGrab]
+
+        # we also want to lock every workspace we migrate
+        for workspace in workspacesToGrab:
+            print("Locking " + workspace + "...")
+            self._api_source.workspaces.lock(workspace, None)
 
         target_workspaces_data = {}
         for target_workspace in target_workspaces:

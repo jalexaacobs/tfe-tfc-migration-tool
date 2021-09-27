@@ -82,8 +82,15 @@ class TFCMigrator(ABC):
 
         # TODO: org_membership_map = org_memberships.migrate(api_source, api_target, teams_map)
 
+        if self.agent_pools.is_valid_migration():
+            agent_pools_map = self.agent_pools.migrate_all()
+
+        workspaces_map, workspace_to_ssh_key_map = self.workspaces.migrate_all(agent_pools_map)
+
         if self.teams.is_valid_migration():
             teams_map = self.teams.migrate_all()
+
+        # commenting the module migrations out for now
 
         # if self.registry_module_versions.is_valid_migration():
         #     # this is for non version controlled modules - should be none
@@ -92,12 +99,7 @@ class TFCMigrator(ABC):
         #     # this is for the actual VCS modules
         #     self.registry_modules.migrate_all()
 
-        ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()
-
-        if self.agent_pools.is_valid_migration():
-            agent_pools_map = self.agent_pools.migrate_all()
-
-        workspaces_map, workspace_to_ssh_key_map = self.workspaces.migrate_all(agent_pools_map)
+        ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()    
 
         self.workspace_ssh_keys.migrate_all(workspaces_map, workspace_to_ssh_key_map, ssh_keys_map)
 
