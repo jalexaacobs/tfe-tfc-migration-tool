@@ -85,12 +85,12 @@ class TFCMigrator(ABC):
         if self.teams.is_valid_migration():
             teams_map = self.teams.migrate_all()
 
-        if self.registry_module_versions.is_valid_migration():
-            # this is for non version controlled modules - should be none
-            self.registry_module_versions.migrate_all()
+        # if self.registry_module_versions.is_valid_migration():
+        #     # this is for non version controlled modules - should be none
+        #     self.registry_module_versions.migrate_all()
 
-            # this is for the actual VCS modules
-            self.registry_modules.migrate_all()
+        #     # this is for the actual VCS modules
+        #     self.registry_modules.migrate_all()
 
         ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()
 
