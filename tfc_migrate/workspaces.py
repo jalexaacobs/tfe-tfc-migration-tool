@@ -40,10 +40,6 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
             source_workspaces = [x for x in source_workspaces if x['id'] in workspacesToGrab]
 
         target_workspaces = self._api_target.workspaces.list_all()
-
-
-        # with open("NewWorkspacePayloadTarget.json","w") as f:
-        #     json.dump(target_workspaces,f, indent=4)
       
         # make sure to lock the workspace
         for workspace in source_workspaces:

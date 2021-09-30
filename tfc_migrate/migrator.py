@@ -103,9 +103,10 @@ class TFCMigrator(ABC):
         #     teams_map = self.teams.migrate_all()
 
 
-        ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()    
+        # There are no SSH keys, we don't need to do these calls
+        # ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()    
 
-        self.workspace_ssh_keys.migrate_all(workspaces_map, workspace_to_ssh_key_map, ssh_keys_map)
+        # self.workspace_ssh_keys.migrate_all(workspaces_map, workspace_to_ssh_key_map, ssh_keys_map)
 
         sensitive_variable_data = self.workspace_vars.migrate_all(workspaces_map)
 
@@ -120,9 +121,6 @@ class TFCMigrator(ABC):
 
         # gonna need to make some kind of teams mapping
         # have the ability to do a map, or just specifically provide team id for access
-
-        # add the delete workspace calls from postman into here 
-        # add checks that ENSURE we only delete the sandbox workspace
 
         # if self.team_access.is_valid_migration():
         #     self.team_access.migrate_all(workspaces_map, teams_map)
@@ -151,15 +149,15 @@ class TFCMigrator(ABC):
 
         output_json = {
             "teams_map": teams_map,
-            "ssh_keys_map": ssh_keys_map,
-            "ssh_key_name_map": ssh_key_name_map,
+            "ssh_keys_map": {},
+            "ssh_key_name_map": {},
             "workspaces_map": workspaces_map,
             "workspace_to_ssh_key_map": workspace_to_ssh_key_map,
             "policies_map": policies_map,
             "policy_sets_map": policy_sets_map,
             "workspace_to_config_version_upload_url_map": workspace_to_config_version_upload_url_map,
             "workspace_to_config_version_file_path_map": workspace_to_config_version_file_path_map,
-            "ssh_key_to_file_path_map": ssh_key_to_file_path_map,
+            "ssh_key_to_file_path_map": {},
             "sensitive_policy_set_parameter_data": sensitive_policy_set_parameter_data,
             "sensitive_variable_data": sensitive_variable_data
         }
