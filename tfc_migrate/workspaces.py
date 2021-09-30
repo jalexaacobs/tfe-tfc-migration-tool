@@ -3,7 +3,9 @@ Module for Terraform Enterprise/Cloud Migration Worker: Workspaces.
 """
 
 import sys
+import os
 import json
+import http.client
 
 from .base_worker import TFCMigratorBaseWorker
 
@@ -23,18 +25,33 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
 
         self._logger.info("Migrating workspaces...")
 
-        # Fetch workspaces from existing org
-        source_workspaces = self._api_source.workspaces.list_all()
+        source_workspaces = {}
+
+        loadFromDumpFile = True
+        if (loadFromDumpFile): # load the workspace info from a dump file
+            self._logger.info("Grabbing workspaces from Dump File...")
+            source_workspaces = json.load(open("NewWorkspacePayload.json"))
+        else: # hit the API to grab the source workspaces
+            self._logger.info("Grabbing workspaces from the hitting API...")
+            workspacesToGrab = {"ws-1xKs7xLA2nP3ExYd"} #sandbox testing
+            # Fetch workspaces from existing org
+            source_workspaces = self._api_source.workspaces.list_all()
+            # grab the desired workspaces
+            source_workspaces = [x for x in source_workspaces if x['id'] in workspacesToGrab]
+
         target_workspaces = self._api_target.workspaces.list_all()
 
-        # grab the desired workspaces
-        workspacesToGrab = {"ws-1xKs7xLA2nP3ExYd"} #sandbox testing
-        source_workspaces = [x for x in source_workspaces if x['id'] in workspacesToGrab]
 
-        # we also want to lock every workspace we migrate
-        for workspace in workspacesToGrab:
-            print("Locking " + workspace + "...")
-            self._api_source.workspaces.lock(workspace, None)
+        # with open("NewWorkspacePayloadTarget.json","w") as f:
+        #     json.dump(target_workspaces,f, indent=4)
+      
+        # make sure to lock the workspace
+        for workspace in source_workspaces:
+            if (not workspace["attributes"]["locked"]):
+                print("Locking " + str(workspace["attributes"]["name"]) + "...")
+                self._api_source.workspaces.lock(workspace["id"], None)
+            else:
+                print(str(workspace["attributes"]["name"]) + " is already locked. Moving on.")
 
         target_workspaces_data = {}
         for target_workspace in target_workspaces:
@@ -128,6 +145,52 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                 ssh_key = source_workspace["relationships"]["ssh-key"]["data"]["id"]
                 workspace_to_ssh_key_map[source_workspace["id"]] = ssh_key
 
+            # TEMPORARY - add DevOps team access for testing visibility
+            addDevOpsAccess = True
+            if (addDevOpsAccess):
+                new_workspace_team_payload = {
+                    "data": {
+                        "attributes": {
+                            "access": "write"
+                        },
+                        "relationships": {
+                            "workspace": {
+                                "data": {
+                                    "type": "workspaces",
+                                    "id": new_workspace_id
+                                }
+                            },
+                            "team": {
+                                "data": {
+                                    "type": "teams",
+                                    "id": "team-EDStmjgwHqJgAmck"
+                                }
+                            }
+                        },
+                        "type": "team-workspaces"
+                    }
+                }
+                self._api_target.team_access.add_team_access(new_workspace_team_payload)
+            
+            # add tags to each workspace we migrate 
+            tagPayload = {
+                "data": [
+                    {
+                        "type": "tags",
+                        "attributes": {
+                            "name": "team:devops"
+                        }
+                    },
+                    {
+                        "type": "tags",
+                        "attributes": {
+                            "name": "MigratedFromTFE"
+                        }
+                    }
+                ]
+            }
+            self.add_tags_to_workspace(new_workspace_id, tagPayload)
+
         self._logger.info("Workspaces migrated.")
         return workspaces_map, workspace_to_ssh_key_map
 
@@ -147,3 +210,20 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                 self._logger.info("Workspace: %s, deleted.", workspace["attributes"]["name"])
 
         self._logger.info("Workspaces deleted.")
+
+    
+    def add_tags_to_workspace(self, workspace_id, payload):
+        print("Adding tags to workspace...")
+        conn = http.client.HTTPSConnection("app.terraform.io")
+        payload = json.dumps(payload)
+        headers = {
+            'Content-Type': 'application/vnd.api+json',
+            'Authorization': 'Bearer ' + os.environ['TFE_TOKEN_TARGET']
+        }
+        conn.request("POST", "/api/v2/workspaces/" + workspace_id + "/relationships/tags", payload, headers)
+        
+        res = conn.getresponse()
+        if (res.status == 204):
+            print("Tags successfully added.")
+        else:
+            print("Failed to add tags. Reason: " + res.reason)

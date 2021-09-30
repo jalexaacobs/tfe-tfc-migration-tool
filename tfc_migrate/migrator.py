@@ -87,10 +87,7 @@ class TFCMigrator(ABC):
 
         workspaces_map, workspace_to_ssh_key_map = self.workspaces.migrate_all(agent_pools_map)
 
-        if self.teams.is_valid_migration():
-            teams_map = self.teams.migrate_all()
-
-        # commenting the module migrations out for now
+        # commenting the module migrations out for now ########################################
 
         # if self.registry_module_versions.is_valid_migration():
         #     # this is for non version controlled modules - should be none
@@ -98,6 +95,13 @@ class TFCMigrator(ABC):
 
         #     # this is for the actual VCS modules
         #     self.registry_modules.migrate_all()
+
+
+        # this affects the team_access migration call
+        # commenting out teams migration for now ##############################################
+        # if self.teams.is_valid_migration():
+        #     teams_map = self.teams.migrate_all()
+
 
         ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()    
 
@@ -114,22 +118,36 @@ class TFCMigrator(ABC):
 
         self.notification_configs.migrate_all(workspaces_map)
 
-        if self.team_access.is_valid_migration():
-            self.team_access.migrate_all(workspaces_map, teams_map)
+        # gonna need to make some kind of teams mapping
+        # have the ability to do a map, or just specifically provide team id for access
+
+        # add the delete workspace calls from postman into here 
+        # add checks that ENSURE we only delete the sandbox workspace
+
+        # if self.team_access.is_valid_migration():
+        #     self.team_access.migrate_all(workspaces_map, teams_map)
 
         workspace_to_config_version_upload_url_map, workspace_to_config_version_file_path_map = self.config_versions.migrate_all(workspaces_map)
 
+        # these will probably need to be run all at once with the vmsphere workspaces
+        # This actually might return nothing
         if self.policies.is_valid_migration():
             policies_map = self.policies.migrate_all()
 
-        if self.policy_sets.is_valid_migration():
-            policy_sets_map = self.policy_sets.migrate_all(workspaces_map, policies_map)
+        # there are policy sets for the vmsphere ob pods
+        # I'm pretty sure the policies map grabbed above tries to reference only the attached workspaces
+        # so since we arent testing with the vmsphere workspaces they arent in the workspace list
+        # Refer to Hyland-GCS -> Settings -> Policy Sets -> onbase-policies to view the workspaces that use this policy
+        migratePolicySets = False
+        if (migratePolicySets):
+            if self.policy_sets.is_valid_migration():
+                policy_sets_map = self.policy_sets.migrate_all(workspaces_map, policies_map)
 
-        # This function returns the information that is needed to publish sensitive
-        # variables, but cannot retrieve the values themselves, so those values will
-        # have to be updated separately.
-        if self.policy_sets.is_valid_migration():
-            sensitive_policy_set_parameter_data = self.policy_set_params.migrate_all(policy_sets_map)
+            # This function returns the information that is needed to publish sensitive
+            # variables, but cannot retrieve the values themselves, so those values will
+            # have to be updated separately.
+            if self.policy_sets.is_valid_migration():
+                sensitive_policy_set_parameter_data = self.policy_set_params.migrate_all(policy_sets_map)
 
         output_json = {
             "teams_map": teams_map,
