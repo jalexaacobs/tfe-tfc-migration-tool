@@ -30,8 +30,6 @@ class RegistryModulesWorker(TFCMigratorBaseWorker):
         modulesToGrab = {"sandbox-testing"}
         source_modules = [x for x in source_modules if x['name'] in modulesToGrab]
 
-        print(json.dumps(source_modules, indent=4))
-
         vcsMapping = json.load(open('vcsMapping.json'))
 
         for source_module in source_modules:
@@ -52,8 +50,8 @@ class RegistryModulesWorker(TFCMigratorBaseWorker):
                         source_module_data["attributes"]["vcs-repo"]["oauth-token-id"]:
                         oauth_token_id = vcs_connection["target"]
 
-                # grab the vcs mapping for the module, it strips away the 'terraform-aws' so we add it back in here to grab
-                moduleId = vcsMapping["terraform-aws-" + str(source_module_name)]["target"]
+                # grab the vcs mapping for the module
+                moduleId = vcsMapping[str(source_module_name)]["target"]
 
                 # Build the new module payload
                 new_module_payload = {

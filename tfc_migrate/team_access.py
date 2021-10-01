@@ -3,7 +3,8 @@ Module for Terraform Enterprise/Cloud Migration Worker: Team Access.
 """
 
 from .base_worker import TFCMigratorBaseWorker
-
+import sys
+import json
 
 class TeamAccessWorker(TFCMigratorBaseWorker):
     """
@@ -34,6 +35,47 @@ class TeamAccessWorker(TFCMigratorBaseWorker):
             # Pull teams from the old workspace
             source_workspace_teams = self._api_source.team_access.list(\
                 filters=source_workspace_team_filters)["data"]
+
+            # we need to make sure aws hosting and gcs devops is always added as they were "owners"
+            # so to do this we need to force add the devops and AWSHT-EXP TFE teams
+            DEVOPS_SOURCE_TEAM = "team-abHXwaadyLvj5db5"
+            AWSHST_SOURCE_TEAM = "team-9zyKC9KZDKFaCpmF"
+            sourceIds = [team["relationships"]["team"]["data"]["id"] for team in source_workspace_teams]
+            if (DEVOPS_SOURCE_TEAM not in sourceIds):
+                print("Adding DevOps Team...")
+                teamJson = {
+                    "type": "team-workspaces",
+                    "attributes": {
+                        "access": "write",
+                    },
+                    "relationships": {
+                        "team": {
+                            "data": {
+                                "id": DEVOPS_SOURCE_TEAM,
+                                "type": "teams"
+                            }
+                        }   
+                    }
+                }
+                source_workspace_teams.append(teamJson)
+            if (AWSHST_SOURCE_TEAM not in sourceIds):
+                print("Adding AWS Hosting team...")
+                teamJson = {
+                    "type": "team-workspaces",
+                    "attributes": {
+                        "access": "write",
+                    },
+                    "relationships": {
+                        "team": {
+                            "data": {
+                                "id": AWSHST_SOURCE_TEAM,
+                                "type": "teams"
+                            }
+                        }   
+                    }
+                }
+                source_workspace_teams.append(teamJson)
+
 
             target_workspace_id = workspaces_map[source_workspace_id]
             target_workspace_team_filters = [

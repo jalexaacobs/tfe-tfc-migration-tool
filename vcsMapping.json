@@ -14,7 +14,7 @@
       "target":"HylandSoftware/aws-sandbox-testing"
    },
 
-   "terraform-aws-sandbox-testing" : {
+   "sandbox-testing" : {
       "source":"GCSTM/terraform-aws-sandbox-testing",
       "target":"HylandSoftware/terraform-aws-sandbox-testing"
    }

@@ -82,25 +82,27 @@ class TFCMigrator(ABC):
 
         # TODO: org_membership_map = org_memberships.migrate(api_source, api_target, teams_map)
 
+        # this affects the team_access migration call
+        # commenting out teams migration for now ##############################################
+        if self.teams.is_valid_migration():
+            teams_map = self.teams.migrate_all()
+
+
         if self.agent_pools.is_valid_migration():
             agent_pools_map = self.agent_pools.migrate_all()
 
         workspaces_map, workspace_to_ssh_key_map = self.workspaces.migrate_all(agent_pools_map)
 
-        # commenting the module migrations out for now ########################################
-
-        # if self.registry_module_versions.is_valid_migration():
-        #     # this is for non version controlled modules - should be none
-        #     self.registry_module_versions.migrate_all()
-
-        #     # this is for the actual VCS modules
-        #     self.registry_modules.migrate_all()
+        if self.team_access.is_valid_migration():
+            self.team_access.migrate_all(workspaces_map, teams_map)
 
 
-        # this affects the team_access migration call
-        # commenting out teams migration for now ##############################################
-        # if self.teams.is_valid_migration():
-        #     teams_map = self.teams.migrate_all()
+        if self.registry_module_versions.is_valid_migration():
+            # this is for non version controlled modules - should be none
+            self.registry_module_versions.migrate_all()
+
+            # this is for the actual VCS modules
+            self.registry_modules.migrate_all()
 
 
         # There are no SSH keys, we don't need to do these calls
@@ -118,12 +120,6 @@ class TFCMigrator(ABC):
         self.run_triggers.migrate_all(workspaces_map)
 
         self.notification_configs.migrate_all(workspaces_map)
-
-        # gonna need to make some kind of teams mapping
-        # have the ability to do a map, or just specifically provide team id for access
-
-        # if self.team_access.is_valid_migration():
-        #     self.team_access.migrate_all(workspaces_map, teams_map)
 
         workspace_to_config_version_upload_url_map, workspace_to_config_version_file_path_map = self.config_versions.migrate_all(workspaces_map)
 

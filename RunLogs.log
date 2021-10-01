@@ -3183,3 +3183,1024 @@ DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/team-wor
 INFO:WorkspacesWorker:Workspaces migrated.
 INFO:SSHKeysWorker:Migrating SSH keys...
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+INFO:root:
+
+
+
+New run started at 2021-09-30 12:15:01.619527. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+INFO:WorkspaceVarsWorker:Migrating workspace variables...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/vars/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 200 11
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 201 484
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 201 546
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 201 555
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 201 503
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 201 507
+INFO:WorkspaceVarsWorker:Workspace variables migrated.
+INFO:StateVersionsWorker:Migrating all state versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=hyland-software&page[number]=1&page[size]=100 HTTP/1.1" 200 805
+INFO:root:
+
+
+
+New run started at 2021-09-30 13:08:27.370179. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+INFO:WorkspaceVarsWorker:Migrating workspace variables...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/vars/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 200 None
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_DEFAULT_REGION, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: instance_type, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: instance_name, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_ACCESS_KEY_ID, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_SECRET_ACCESS_KEY, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variables migrated.
+INFO:StateVersionsWorker:Migrating all state versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+INFO:root:
+
+
+
+New run started at 2021-10-01 09:22:25.958826. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+INFO:WorkspaceVarsWorker:Migrating workspace variables...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/vars/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 200 None
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_DEFAULT_REGION, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: instance_type, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: instance_name, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_ACCESS_KEY_ID, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_SECRET_ACCESS_KEY, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variables migrated.
+INFO:StateVersionsWorker:Migrating all state versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=hyland-software&page[number]=1&page[size]=100 HTTP/1.1" 200 805
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 0, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 1, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 2, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 3, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 4, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 5, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 6, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 7, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 8, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 9, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/state-versions HTTP/1.1" 201 1278
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-qj481XobTLjYKSHd/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 10, for workspace aws-sandbox-testing created.
+INFO:StateVersionsWorker:All state versions migrated.
+INFO:RunTriggersWorker:Migrating run triggers...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/run-triggers?filter[run-trigger][type]=inbound&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:RunTriggersWorker:Run triggers migrated.
+INFO:NotificationConfigsWorker:Migrating notification configs...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/notification-configurations HTTP/1.1" 200 None
+INFO:NotificationConfigsWorker:Notification configs migrated.
+INFO:ConfigVersionsWorker:Migrating config versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/configuration-versions HTTP/1.1" 200 None
+INFO:ConfigVersionsWorker:Config versions migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:PoliciesWorker:Migrating policies...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 538
+INFO:PoliciesWorker:Policies migrated.
+INFO:root:
+
+
+
+New run started at 2021-10-01 09:43:09.217547. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1259
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1259
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/registry-modules HTTP/1.1" 201 1000
+INFO:RegistryModulesWorker:Registry modules migrated.
+INFO:WorkspaceVarsWorker:Migrating workspace variables...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/vars/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-qj481XobTLjYKSHd/vars/ HTTP/1.1" 200 None
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_DEFAULT_REGION, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: instance_type, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: instance_name, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_ACCESS_KEY_ID, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variable: AWS_SECRET_ACCESS_KEY, for workspace aws-sandbox-testing exists. Skipped.
+INFO:WorkspaceVarsWorker:Workspace variables migrated.
+INFO:StateVersionsWorker:Migrating all state versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=hyland-software&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=hyland-software&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 0, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 1, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 2, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 3, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 4, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 5, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 6, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 7, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 8, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 9, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:State Version: 10, for workspace aws-sandbox-testing, exists or is older than the current version. Skipped.
+INFO:StateVersionsWorker:All state versions migrated.
+INFO:RunTriggersWorker:Migrating run triggers...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/run-triggers?filter[run-trigger][type]=inbound&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:RunTriggersWorker:Run triggers migrated.
+INFO:NotificationConfigsWorker:Migrating notification configs...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/notification-configurations HTTP/1.1" 200 None
+INFO:NotificationConfigsWorker:Notification configs migrated.
+INFO:ConfigVersionsWorker:Migrating config versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/configuration-versions HTTP/1.1" 200 None
+INFO:ConfigVersionsWorker:Config versions migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:PoliciesWorker:Migrating policies...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 538
+INFO:PoliciesWorker:Policies migrated.
+INFO:root:
+
+
+
+New run started at 2021-10-01 12:13:58.118749. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/organizations/hyland-software/workspaces HTTP/1.1" 201 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/team-workspaces HTTP/1.1" 201 567
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1277
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/registry-modules HTTP/1.1" 201 1000
+INFO:RegistryModulesWorker:Registry modules migrated.
+INFO:WorkspaceVarsWorker:Migrating workspace variables...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-25Ce73iTLFYgfBy3 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/vars/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/vars/ HTTP/1.1" 200 11
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/vars/ HTTP/1.1" 201 484
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/vars/ HTTP/1.1" 201 546
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/vars/ HTTP/1.1" 201 555
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/vars/ HTTP/1.1" 201 503
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/vars/ HTTP/1.1" 201 507
+INFO:WorkspaceVarsWorker:Workspace variables migrated.
+INFO:StateVersionsWorker:Migrating all state versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=hyland-software&page[number]=1&page[size]=100 HTTP/1.1" 200 805
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 0, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 1, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 2, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 3, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 4, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 5, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 6, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 7, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 8, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 9, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/state-versions HTTP/1.1" 201 1278
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-25Ce73iTLFYgfBy3/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 10, for workspace aws-sandbox-testing created.
+INFO:StateVersionsWorker:All state versions migrated.
+INFO:RunTriggersWorker:Migrating run triggers...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/run-triggers?filter[run-trigger][type]=inbound&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:RunTriggersWorker:Run triggers migrated.
+INFO:NotificationConfigsWorker:Migrating notification configs...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/notification-configurations HTTP/1.1" 200 None
+INFO:NotificationConfigsWorker:Notification configs migrated.
+INFO:ConfigVersionsWorker:Migrating config versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/configuration-versions HTTP/1.1" 200 None
+INFO:ConfigVersionsWorker:Config versions migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:PoliciesWorker:Migrating policies...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 538
+INFO:PoliciesWorker:Policies migrated.
+INFO:root:
+
+
+
+New run started at 2021-10-01 12:21:44.179240. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/organizations/hyland-software/workspaces HTTP/1.1" 201 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/team-workspaces HTTP/1.1" 201 567
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1277
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/registry-modules HTTP/1.1" 201 1000
+INFO:RegistryModulesWorker:Registry modules migrated.
+INFO:WorkspaceVarsWorker:Migrating workspace variables...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-pELJcKHCgMxDY6Me HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/vars/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/vars/ HTTP/1.1" 200 11
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/vars/ HTTP/1.1" 201 484
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/vars/ HTTP/1.1" 201 546
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/vars/ HTTP/1.1" 201 555
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/vars/ HTTP/1.1" 201 503
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/vars/ HTTP/1.1" 201 507
+INFO:WorkspaceVarsWorker:Workspace variables migrated.
+INFO:StateVersionsWorker:Migrating all state versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=hyland-software&page[number]=1&page[size]=100 HTTP/1.1" 200 805
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 0, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 1, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 2, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 3, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 4, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 5, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 6, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 7, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 8, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 9, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/state-versions HTTP/1.1" 201 1278
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-pELJcKHCgMxDY6Me/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 10, for workspace aws-sandbox-testing created.
+INFO:StateVersionsWorker:All state versions migrated.
+INFO:RunTriggersWorker:Migrating run triggers...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/run-triggers?filter[run-trigger][type]=inbound&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:RunTriggersWorker:Run triggers migrated.
+INFO:NotificationConfigsWorker:Migrating notification configs...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/notification-configurations HTTP/1.1" 200 None
+INFO:NotificationConfigsWorker:Notification configs migrated.
+INFO:ConfigVersionsWorker:Migrating config versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/configuration-versions HTTP/1.1" 200 None
+INFO:ConfigVersionsWorker:Config versions migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:PoliciesWorker:Migrating policies...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 538
+INFO:PoliciesWorker:Policies migrated.
+INFO:root:
+
+
+
+New run started at 2021-10-01 14:08:52.876812. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 14:42:54.201446. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 14:50:25.110813. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:TeamsWorker:Teams migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/organizations/hyland-software/workspaces HTTP/1.1" 201 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/team-workspaces HTTP/1.1" 201 567
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamAccessWorker:Migrating team access...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 14:53:31.623655. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:TeamsWorker:Teams migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamAccessWorker:Migrating team access...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 15:10:40.346945. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:TeamsWorker:Teams migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamAccessWorker:Migrating team access...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 15:17:04.629194. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:TeamsWorker:Teams migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamAccessWorker:Migrating team access...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 15:28:00.940504. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:TeamsWorker:Teams migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamAccessWorker:Migrating team access...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 15:30:14.989542. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:TeamsWorker:Teams migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamAccessWorker:Migrating team access...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+INFO:root:
+
+
+
+New run started at 2021-10-01 15:31:26.204084. Arguments passed in: ['migration.py', '--migrate-all-state', '--debug']
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamsWorker:Migrating teams...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/teams HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/teams HTTP/1.1" 200 None
+INFO:TeamsWorker:Teams migrated.
+INFO:AgentPoolsWorker:There is no valid migration path across TFC/TFE for this endpoint.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:WorkspacesWorker:Migrating workspaces...
+INFO:WorkspacesWorker:Grabbing workspaces from Dump File...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/workspaces?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:WorkspacesWorker:Workspace: aws-sandbox-testing, exists. Skipped.
+INFO:WorkspacesWorker:Workspaces migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:TeamAccessWorker:Migrating team access...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/team-workspaces?filter[workspace][id]=ws-QYWYRz1sC9xhXDMm HTTP/1.1" 200 569
+INFO:TeamAccessWorker:Team access for workspace: team-EDStmjgwHqJgAmck, exists (ws-QYWYRz1sC9xhXDMm). Skipped.
+INFO:TeamAccessWorker:Team access for workspace: team-EDStmjgwHqJgAmck, exists (ws-QYWYRz1sC9xhXDMm). Skipped.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/team-workspaces HTTP/1.1" 201 567
+INFO:TeamAccessWorker:Team access migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:RegistryModuleVersionsWorker:Migrating registry module versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1273
+INFO:RegistryModuleVersionsWorker:Registry module versions migrated.
+INFO:RegistryModulesWorker:Migrating registry modules...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/registry/v1/modules/Hyland-GCS?limit=200 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/registry/v1/modules/hyland-software HTTP/1.1" 200 1273
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/registry-modules/show/Hyland-GCS/sandbox-testing/aws HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/registry-modules HTTP/1.1" 201 1000
+INFO:RegistryModulesWorker:Registry modules migrated.
+INFO:WorkspaceVarsWorker:Migrating workspace variables...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/vars/ HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/vars/ HTTP/1.1" 200 11
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/vars/ HTTP/1.1" 201 484
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/vars/ HTTP/1.1" 201 546
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/vars/ HTTP/1.1" 201 555
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/vars/ HTTP/1.1" 201 503
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/vars/ HTTP/1.1" 201 507
+INFO:WorkspaceVarsWorker:Workspace variables migrated.
+INFO:StateVersionsWorker:Migrating all state versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=Hyland-GCS&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/state-versions?filter[workspace][name]=aws-sandbox-testing&filter[organization][name]=hyland-software&page[number]=1&page[size]=100 HTTP/1.1" 200 805
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 0, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 1, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 2, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 3, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 4, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 5, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 6, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 7, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 8, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1277
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 9, for workspace aws-sandbox-testing created.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/lock HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/state-versions HTTP/1.1" 201 1278
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "POST /api/v2/workspaces/ws-QYWYRz1sC9xhXDMm/actions/unlock HTTP/1.1" 200 None
+INFO:StateVersionsWorker:State Version: 10, for workspace aws-sandbox-testing created.
+INFO:StateVersionsWorker:All state versions migrated.
+INFO:RunTriggersWorker:Migrating run triggers...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/run-triggers?filter[run-trigger][type]=inbound&page[number]=1&page[size]=100 HTTP/1.1" 200 None
+INFO:RunTriggersWorker:Run triggers migrated.
+INFO:NotificationConfigsWorker:Migrating notification configs...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/notification-configurations HTTP/1.1" 200 None
+INFO:NotificationConfigsWorker:Notification configs migrated.
+INFO:ConfigVersionsWorker:Migrating config versions...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/workspaces/ws-1xKs7xLA2nP3ExYd/configuration-versions HTTP/1.1" 200 None
+INFO:ConfigVersionsWorker:Config versions migrated.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/entitlement-set HTTP/1.1" 200 434
+INFO:PoliciesWorker:Migrating policies...
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): terraform.hylandcloud.com:443
+DEBUG:urllib3.connectionpool:https://terraform.hylandcloud.com:443 "GET /api/v2/organizations/Hyland-GCS/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.terraform.io:443
+DEBUG:urllib3.connectionpool:https://app.terraform.io:443 "GET /api/v2/organizations/hyland-software/policies?page[number]=1&page[size]=100 HTTP/1.1" 200 538
+INFO:PoliciesWorker:Policies migrated.
