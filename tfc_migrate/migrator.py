@@ -83,19 +83,11 @@ class TFCMigrator(ABC):
         # TODO: org_membership_map = org_memberships.migrate(api_source, api_target, teams_map)
 
         # this affects the team_access migration call
-        # commenting out teams migration for now ##############################################
-        if self.teams.is_valid_migration():
-            teams_map = self.teams.migrate_all()
-
 
         if self.agent_pools.is_valid_migration():
             agent_pools_map = self.agent_pools.migrate_all()
 
         workspaces_map, workspace_to_ssh_key_map = self.workspaces.migrate_all(agent_pools_map)
-
-        if self.team_access.is_valid_migration():
-            self.team_access.migrate_all(workspaces_map, teams_map)
-
 
         if self.registry_module_versions.is_valid_migration():
             # this is for non version controlled modules - should be none
@@ -103,6 +95,12 @@ class TFCMigrator(ABC):
 
             # this is for the actual VCS modules
             self.registry_modules.migrate_all()
+
+        if self.teams.is_valid_migration():
+            teams_map = self.teams.migrate_all()
+
+        if self.team_access.is_valid_migration():
+            self.team_access.migrate_all(workspaces_map, teams_map)
 
 
         # There are no SSH keys, we don't need to do these calls

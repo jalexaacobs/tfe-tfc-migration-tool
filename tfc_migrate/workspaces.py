@@ -30,14 +30,25 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
         loadFromDumpFile = True
         if (loadFromDumpFile): # load the workspace info from a dump file
             self._logger.info("Grabbing workspaces from Dump File...")
-            source_workspaces = json.load(open("NewWorkspacePayload.json"))
+            source_workspaces = json.load(open("SourceWorkspaces.json"))
         else: # hit the API to grab the source workspaces
             self._logger.info("Grabbing workspaces from the hitting API...")
-            workspacesToGrab = {"ws-1xKs7xLA2nP3ExYd"} #sandbox testing
             # Fetch workspaces from existing org
             source_workspaces = self._api_source.workspaces.list_all()
-            # grab the desired workspaces
-            source_workspaces = [x for x in source_workspaces if x['id'] in workspacesToGrab]
+
+            # save to a dump file so we dont have to hit the API again on subsequent runs
+            with open("SourceWorkspaces.json", 'w', encoding='utf-8') as f:
+                json.dump(source_workspaces, f, ensure_ascii=False, indent=4)
+
+        workspacesToGrab = json.load(open("WorkspacesToMigrate.json"))["workspaces"]
+        
+        # grab the desired workspaces we want to migrate
+        source_workspacesToGrab = []
+        for source_workspace in source_workspaces:
+            for workspace in workspacesToGrab:
+                if (workspace in source_workspace["attributes"]["name"]):
+                    source_workspacesToGrab.append(source_workspace)
+        source_workspaces = source_workspacesToGrab
 
         target_workspaces = self._api_target.workspaces.list_all()
       

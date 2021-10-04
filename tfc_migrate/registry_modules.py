@@ -27,7 +27,6 @@ class RegistryModulesWorker(TFCMigratorBaseWorker):
         target_module_names = \
             [target_module["name"] for target_module in target_modules]
 
-        print(target_module_names)
         modulesToGrab = {"sandbox-testing"}
         source_modules = [x for x in source_modules if x['name'] in modulesToGrab]
 
