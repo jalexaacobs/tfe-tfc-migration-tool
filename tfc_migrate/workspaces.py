@@ -27,7 +27,7 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
 
         source_workspaces = {}
 
-        loadFromDumpFile = True
+        loadFromDumpFile = False
         if (loadFromDumpFile): # load the workspace info from a dump file
             self._logger.info("Grabbing workspaces from Dump File...")
             source_workspaces = json.load(open("SourceWorkspaces.json"))
@@ -67,7 +67,7 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
         workspaces_map = {}
         workspace_to_ssh_key_map = {}
 
-        vcsMapping = json.load(open('vcsMapping.json'))
+        # vcsMapping = json.load(open('vcsMapping.json'))
 
         for source_workspace in source_workspaces:
             source_workspace_name = source_workspace["attributes"]["name"]
@@ -131,7 +131,10 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                         oauth_token_id = vcs_connection["target"]
 
                 #grab the repo identifier from the json mapping using source_workspace_name
-                repoId = vcsMapping[source_workspace_name]["target"]
+                GITHUB_ORG = "HylandSoftware/"
+                #repoId = GITHUB_ORG + source_workspace_name
+                repoId = source_workspace["attributes"]["vcs-repo"]["identifier"]
+                repoId = repoId.replace("GCSTFEW","HylandSoftware")
 
                 new_workspace_payload["data"]["attributes"]["vcs-repo"] = {
                     "identifier": repoId,
