@@ -84,17 +84,17 @@ class TFCMigrator(ABC):
 
         # this affects the team_access migration call
 
+        # if self.registry_module_versions.is_valid_migration():
+        #     # this is for non version controlled modules - should be none
+        #     self.registry_module_versions.migrate_all()
+
+        #     # this is for the actual VCS modules
+        #     self.registry_modules.migrate_all()
+
         if self.agent_pools.is_valid_migration():
             agent_pools_map = self.agent_pools.migrate_all()
 
         workspaces_map, workspace_to_ssh_key_map = self.workspaces.migrate_all(agent_pools_map)
-
-        if self.registry_module_versions.is_valid_migration():
-            # this is for non version controlled modules - should be none
-            self.registry_module_versions.migrate_all()
-
-            # this is for the actual VCS modules
-            self.registry_modules.migrate_all()
 
         if self.teams.is_valid_migration():
             teams_map = self.teams.migrate_all()
