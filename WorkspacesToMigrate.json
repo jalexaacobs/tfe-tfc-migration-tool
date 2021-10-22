@@ -1,6 +1,6 @@
 {
     "workspaces":[
         "aws-sql-server-database*************",
-        "aws-sandbox-testing"
+        "aws-shared-administration"
     ]
 }

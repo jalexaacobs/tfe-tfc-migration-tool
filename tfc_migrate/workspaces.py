@@ -27,7 +27,7 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
 
         source_workspaces = {}
 
-        loadFromDumpFile = False
+        loadFromDumpFile = True
         if (loadFromDumpFile): # load the workspace info from a dump file
             self._logger.info("Grabbing workspaces from Dump File...")
             source_workspaces = json.load(open("SourceWorkspaces.json"))
@@ -173,7 +173,7 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                             "team": {
                                 "data": {
                                     "type": "teams",
-                                    "id": "team-EDStmjgwHqJgAmck"
+                                    "id": "team-nyCLt4nxjrfZ1sUx"
                                 }
                             }
                         },

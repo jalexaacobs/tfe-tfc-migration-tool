@@ -22,6 +22,20 @@ class RegistryModulesWorker(TFCMigratorBaseWorker):
 
         self._logger.info("Migrating registry modules...")
 
+        loadFromDumpFile = False
+        if (loadFromDumpFile): # load the workspace info from a dump file
+            self._logger.info("Grabbing workspaces from Dump File...")
+            source_workspaces = json.load(open("SourceWorkspaces.json"))
+        else: # hit the API to grab the source workspaces
+            self._logger.info("Grabbing workspaces from the hitting API...")
+            # Fetch workspaces from existing org
+            source_workspaces = self._api_source.workspaces.list_all()
+
+            # save to a dump file so we dont have to hit the API again on subsequent runs
+            with open("SourceWorkspaces.json", 'w', encoding='utf-8') as f:
+                json.dump(source_workspaces, f, ensure_ascii=False, indent=4)
+
+
         source_modules = self._api_source.registry_modules.list(limit=200)["modules"]
         target_modules = self._api_target.registry_modules.list(limit=200)["modules"]
         target_module_names = \
