@@ -1,74 +1,74 @@
 {
-   "CN=DLG-TFE-GCS-AWSHT-EXP": {
-       "source": "team-9zyKC9KZDKFaCpmF",
-       "target": "team-NBuKoFECASvanMGc"
-   },
-   "CN=DLG-TFE-GCS-CSD": {
-       "source": "team-tzi6wxZxVmWGmzXK",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-CSD-IN": {
-       "source": "team-tvMW7jQ5xW7WZpZM",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-DBA": {
-       "source": "team-JLBQm76VdbBHfUbd",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-DEVOPS": {
-       "source": "team-abHXwaadyLvj5db5",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-HST": {
-       "source": "team-95mZ79cK2Rbom2pQ",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-INFRA-DATA": {
-       "source": "team-xp6txFGLaPctbBTu",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-INFRA-ENG": {
-       "source": "team-9PmDCWQ4XvUGKiJR",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-INFRA-OPS": {
-       "source": "team-6FfBdm55ouqLMkN9",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-NETWORK-ADM": {
-       "source": "team-63YHw72Vrft77ePb",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-NETWORK-ENG": {
-       "source": "team-5WqTzW6GZTZeRXRV",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "CN=DLG-TFE-GCS-NOC2-ADM": {
-       "source": "team-Y2vbekncQYBiJKWB",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "hxpe_owners": {
-       "source": "team-3UVqdLXBvZkH4uLK",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "owners": {
-       "source": "team-csB9aaES5DJqLNyH",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "policy_admins": {
-       "source": "team-yCdVpjnZaRwPsNb3",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "vcs_admins": {
-       "source": "team-7sx56Kw1dBeegf58",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "workspace_admins": {
-       "source": "team-Pie7aMGCAdcA9U6L",
-       "target": "team-EDStmjgwHqJgAmck"
-   },
-   "workspace_and_policy_admins": {
-       "source": "team-ERDRWiy1Z9T6mQuT",
-       "target": "team-EDStmjgwHqJgAmck"
-   }
-}
+    "CN=DLG-TFE-GCS-AWSHT-EXP": {
+        "source": "team-9zyKC9KZDKFaCpmF",
+        "target": "team-eWetgQmS7nwf9eDG"
+    },
+    "CN=DLG-TFE-GCS-CSD": {
+        "source": "team-tzi6wxZxVmWGmzXK",
+        "target": "team-YiaHSqaC2X8ppcCj"
+    },
+    "CN=DLG-TFE-GCS-CSD-IN": {
+        "source": "team-tvMW7jQ5xW7WZpZM",
+        "target": "team-AWnZnbxBspDW2gqh"
+    },
+    "CN=DLG-TFE-GCS-DBA": {
+        "source": "team-JLBQm76VdbBHfUbd",
+        "target": "team-TX8iXmmB7Ye9EzaB"
+    },
+    "CN=DLG-TFE-GCS-DEVOPS": {
+        "source": "team-abHXwaadyLvj5db5",
+        "target": "team-nyCLt4nxjrfZ1sUx"
+    },
+    "CN=DLG-TFE-GCS-HST": {
+        "source": "team-95mZ79cK2Rbom2pQ",
+        "target": "team-8EbcftpzGBHUFopi"
+    },
+    "CN=DLG-TFE-GCS-INFRA-DATA": {
+        "source": "team-xp6txFGLaPctbBTu",
+        "target": "team-Q3kLhrrUsdEo46Bk"
+    },
+    "CN=DLG-TFE-GCS-INFRA-ENG": {
+        "source": "team-9PmDCWQ4XvUGKiJR",
+        "target": "team-miUqqWnVyATRBs9h"
+    },
+    "CN=DLG-TFE-GCS-INFRA-OPS": {
+        "source": "team-6FfBdm55ouqLMkN9",
+        "target": "team-wBc4xp76Da96cmkx"
+    },
+    "CN=DLG-TFE-GCS-NETWORK-ADM": {
+        "source": "team-63YHw72Vrft77ePb",
+        "target": "team-Aa1jbWXLFVvr1VZZ"
+    },
+    "CN=DLG-TFE-GCS-NETWORK-ENG": {
+        "source": "team-5WqTzW6GZTZeRXRV",
+        "target": "team-sCGFZWGCWcasxDRr"
+    },
+    "CN=DLG-TFE-GCS-NOC2-ADM": {
+        "source": "team-Y2vbekncQYBiJKWB",
+        "target": "team-k6JuZEZDrtkWfEWU"
+    },
+    "hxpe_owners": {
+        "source": "team-3UVqdLXBvZkH4uLK",
+        "target": "team-EDStmjgwHqJgAmck"
+    },
+    "owners": {
+        "source": "team-csB9aaES5DJqLNyH",
+        "target": "team-EDStmjgwHqJgAmck"
+    },
+    "policy_admins": {
+        "source": "team-yCdVpjnZaRwPsNb3",
+        "target": "team-EDStmjgwHqJgAmck"
+    },
+    "vcs_admins": {
+        "source": "team-7sx56Kw1dBeegf58",
+        "target": "team-EDStmjgwHqJgAmck"
+    },
+    "workspace_admins": {
+        "source": "team-Pie7aMGCAdcA9U6L",
+        "target": "team-EDStmjgwHqJgAmck"
+    },
+    "workspace_and_policy_admins": {
+        "source": "team-ERDRWiy1Z9T6mQuT",
+        "target": "team-EDStmjgwHqJgAmck"
+    }
+ }

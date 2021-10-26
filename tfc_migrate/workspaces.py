@@ -135,6 +135,7 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                 #repoId = GITHUB_ORG + source_workspace_name
                 repoId = source_workspace["attributes"]["vcs-repo"]["identifier"]
                 repoId = repoId.replace("GCSTFEW","HylandSoftware")
+                repoId = repoId.replace("gcstfew","HylandSoftware") # some repos have lowercase here for some reason 
 
                 new_workspace_payload["data"]["attributes"]["vcs-repo"] = {
                     "identifier": repoId,
@@ -145,6 +146,8 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                 }
 
             # Build the new workspace
+            print("Creating workspace for " + source_workspace_name)
+            #print(new_workspace_payload)
             new_workspace = self._api_target.workspaces.create(new_workspace_payload)
             self._logger.info("Workspace: %s, created.", source_workspace_name)
 
@@ -156,7 +159,7 @@ class WorkspacesWorker(TFCMigratorBaseWorker):
                 workspace_to_ssh_key_map[source_workspace["id"]] = ssh_key
 
             # TEMPORARY - add DevOps team access for testing visibility
-            addDevOpsAccess = True
+            addDevOpsAccess = False
             if (addDevOpsAccess):
                 new_workspace_team_payload = {
                     "data": {

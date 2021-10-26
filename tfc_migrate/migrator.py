@@ -96,13 +96,6 @@ class TFCMigrator(ABC):
 
         workspaces_map, workspace_to_ssh_key_map = self.workspaces.migrate_all(agent_pools_map)
 
-        if self.teams.is_valid_migration():
-            teams_map = self.teams.migrate_all()
-
-        if self.team_access.is_valid_migration():
-            self.team_access.migrate_all(workspaces_map, teams_map)
-
-
         # There are no SSH keys, we don't need to do these calls
         # ssh_keys_map, ssh_key_name_map, ssh_key_to_file_path_map = self.ssh_keys.migrate_all()    
 
@@ -140,6 +133,13 @@ class TFCMigrator(ABC):
             # have to be updated separately.
             if self.policy_sets.is_valid_migration():
                 sensitive_policy_set_parameter_data = self.policy_set_params.migrate_all(policy_sets_map)
+
+        if self.teams.is_valid_migration():
+            teams_map = self.teams.migrate_all()
+
+        if self.team_access.is_valid_migration():
+            self.team_access.migrate_all(workspaces_map, teams_map)
+
 
         output_json = {
             "teams_map": teams_map,

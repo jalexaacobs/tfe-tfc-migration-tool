@@ -46,7 +46,7 @@ class TeamAccessWorker(TFCMigratorBaseWorker):
                 teamJson = {
                     "type": "team-workspaces",
                     "attributes": {
-                        "access": "write",
+                        "access": "admin",
                     },
                     "relationships": {
                         "team": {
@@ -122,7 +122,7 @@ class TeamAccessWorker(TFCMigratorBaseWorker):
                         "type": "team-workspaces"
                     }
                 }
-
+                #print(new_workspace_team_payload)
                 if source_workspace_team["attributes"]["access"] == "custom":
                     attributes_to_copy = [
                         "runs", "variables", "state-versions", "sentinel-mocks",
